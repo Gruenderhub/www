@@ -124,6 +124,8 @@ header {
 footer {
   font-size: 0.675em;
   color: $dim;
+  margin: 0 auto;
+  max-width: 500px;
   a {
     color: $dim;
     text-decoration: underline;

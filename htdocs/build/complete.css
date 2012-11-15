@@ -581,7 +581,9 @@ header #logo {
 
 footer {
   font-size: 0.675em;
-  color: rgba(102, 102, 102, 0.75); }
+  color: rgba(102, 102, 102, 0.75);
+  margin: 0 auto;
+  max-width: 500px; }
   footer a {
     color: rgba(102, 102, 102, 0.75);
     text-decoration: underline; }
