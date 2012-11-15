@@ -1,0 +1,134 @@
+/** Colors **/
+
+$bg: #fafafa;
+$font: rgba(0, 0, 0, 0.75);
+$dim: lighten($font, 40);
+$beige: #B48868;
+$beige_hover: lighten($beige, 10);
+$hr_color: lighten($beige, 30);
+$warning: mix($bg, #ff0, 80);
+
+/** Helpers **/
+
+* {
+  box-sizing: border-box;
+}
+
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.nolist {
+  list-style: none;
+  padding: 0;
+}
+
+.compactlines {
+  line-height: 1.5em;
+}
+
+/** Styles **/
+
+html {
+  background-color: $bg;
+  color: $font;
+  font-family: Arial, sans-serif;
+  line-height: 1.25em;
+}
+
+a {
+  text-decoration: none;
+  color: $beige;
+}
+
+a:hover {
+  color: $beige_hover;
+}
+
+.block {
+  width: 95%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.box {
+  @extend .block;
+  margin: 0 auto 2em auto;
+  background-color: #fff;
+  box-shadow: 2px 2px 6px #aaa;
+  padding: 1.5em;
+}
+
+.warning-box {
+  @extend .box;
+  background-color: $warning;
+}
+
+.headline {
+  margin: 0;
+  padding: 0;
+}
+
+.subheadline {
+  @extend .headline;
+  padding-bottom: 0.25em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid $hr_color;
+}
+
+h1 {
+  @extend .headline;
+  color: lighten($font, 40);
+}
+
+h2 {
+  @extend .subheadline;
+  font-size: 1.5em;
+}
+
+header {
+  #candybar {
+    @extend .block;
+    background-image: url(farben.png);
+    height: 4px;
+    box-shadow: 1px 1px 3px #aaa;
+    margin-bottom: 2em;
+  }
+
+  #logo {
+    padding: 2em 1em 1em 1em;
+    margin-bottom: 1px;
+
+    img {
+      max-width: 400px;
+      width: 75%;
+    }
+  }
+}
+
+footer {
+  font-size: 0.675em;
+  color: $dim;
+  a {
+    color: $dim;
+    text-decoration: underline;
+  }
+  p {
+    margin: 0 0 0.25em 0;
+  }
+}
