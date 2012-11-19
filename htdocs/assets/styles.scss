@@ -1,8 +1,8 @@
 /** Colors **/
 
 $bg: #fafafa;
-$font: rgba(0, 0, 0, 0.75);
-$dim: lighten($font, 40);
+$text: rgba(0, 0, 0, 0.75);
+$dim: lighten($text, 40);
 $beige: #B48868;
 $beige_hover: lighten($beige, 10);
 $hr_color: lighten($beige, 30);
@@ -42,13 +42,22 @@ $warning: mix($bg, #ff0, 80);
   line-height: 1.5em;
 }
 
+.align-right {
+  float: right;
+}
+
 /** Styles **/
 
 html {
   background-color: $bg;
-  color: $font;
+  background-image: url(farben-grau.png);
+  color: $text;
   font-family: Arial, sans-serif;
   line-height: 1.25em;
+}
+
+body {
+  margin: 2%;
 }
 
 a {
@@ -60,28 +69,21 @@ a:hover {
   color: $beige_hover;
 }
 
-.block {
-  width: 95%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.box {
-  @extend .block;
-  margin: 0 auto 2em auto;
-  background-color: #fff;
-  box-shadow: 2px 2px 6px #aaa;
-  padding: 1.5em;
+p:last-child {
+  margin-bottom: 0;
 }
 
 .warning-box {
-  @extend .box;
   background-color: $warning;
+  padding: 1em;
 }
 
 .headline {
   margin: 0;
   padding: 0;
+  small {
+    font-weight: normal;
+  }
 }
 
 .subheadline {
@@ -89,11 +91,12 @@ a:hover {
   padding-bottom: 0.25em;
   margin-bottom: 1em;
   border-bottom: 1px solid $hr_color;
+
 }
 
 h1 {
   @extend .headline;
-  color: lighten($font, 40);
+  color: lighten($text, 40);
 }
 
 h2 {
@@ -101,36 +104,99 @@ h2 {
   font-size: 1.5em;
 }
 
+hr {
+  border: 0;
+  background-image: url(sep.png);
+  height: 4px;
+}
+
 header {
-  #candybar {
-    @extend .block;
-    background-image: url(farben.png);
-    height: 4px;
-    box-shadow: 1px 1px 3px #aaa;
-    margin-bottom: 2em;
-  }
+  padding: 1em;
 
   #logo {
-    padding: 2em 1em 1em 1em;
-    margin-bottom: 1px;
-
     img {
-      max-width: 400px;
-      width: 75%;
+      width: 100%;
     }
   }
+
+  #logo + p {
+    color: lighten($text, 40);
+    font-size: 0.75em;
+  }
+
+  nav {
+    dl {
+      dt {
+        font-weight: bold;
+        font-size: 0.75em;
+        color: lighten($text, 10);
+      }
+      dd {
+        margin-left: 1em;
+      }
+    }
+  }
+
+  .warning-box {
+    font-size: 0.75em;
+  }
+}
+
+article {
+  padding: 1em;
 }
 
 footer {
   font-size: 0.675em;
-  color: $dim;
-  margin: 0 auto;
-  max-width: 500px;
+  color: rgba(#fff, 0.85);
+  margin: 2em auto 0 auto;
   a {
-    color: $dim;
+    color: rgba(#fff, 0.85);
     text-decoration: underline;
   }
   p {
     margin: 0 0 0.25em 0;
+  }
+}
+
+#main {
+  width: 100%;
+  padding: 1em;
+  position: relative;
+  background-color: rgba($bg, 0.95);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.56);
+}
+
+.event {
+  .description {
+    font-size: 0.75em;
+  }
+}
+
+/** Responsive Styles **/
+
+@media screen and (min-width: 768px) {
+
+  header {
+    float: left;
+    width: 25%;
+  }
+
+  article {
+    float: left;
+    width: 75%;
+
+  }
+
+  .event {
+    .info {
+      float: left;
+      width: 25%;
+    }
+    .description {
+      float: left;
+      width: 75%;
+      padding-left: 10%;
+    }
   }
 }

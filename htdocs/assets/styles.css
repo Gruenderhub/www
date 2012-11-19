@@ -24,12 +24,19 @@
 .compactlines {
   line-height: 1.5em; }
 
+.align-right {
+  float: right; }
+
 /** Styles **/
 html {
   background-color: #fafafa;
+  background-image: url(farben-grau.png);
   color: rgba(0, 0, 0, 0.75);
   font-family: Arial, sans-serif;
   line-height: 1.25em; }
+
+body {
+  margin: 2%; }
 
 a {
   text-decoration: none;
@@ -38,23 +45,18 @@ a {
 a:hover {
   color: #c5a38a; }
 
-.block, .box, .warning-box, header #candybar {
-  width: 95%;
-  max-width: 600px;
-  margin: 0 auto; }
-
-.box, .warning-box {
-  margin: 0 auto 2em auto;
-  background-color: #fff;
-  box-shadow: 2px 2px 6px #aaa;
-  padding: 1.5em; }
+p:last-child {
+  margin-bottom: 0; }
 
 .warning-box {
-  background-color: #fbfbc8; }
+  background-color: #fbfbc8;
+  padding: 1em; }
 
 .headline, .subheadline, h2, h1 {
   margin: 0;
   padding: 0; }
+  .headline small, .subheadline small, h2 small, h1 small {
+    font-weight: normal; }
 
 .subheadline, h2 {
   padding-bottom: 0.25em;
@@ -67,25 +69,64 @@ h1 {
 h2 {
   font-size: 1.5em; }
 
-header #candybar {
-  background-image: url(farben.png);
-  height: 4px;
-  box-shadow: 1px 1px 3px #aaa;
-  margin-bottom: 2em; }
-header #logo {
-  padding: 2em 1em 1em 1em;
-  margin-bottom: 1px; }
+hr {
+  border: 0;
+  background-image: url(sep.png);
+  height: 4px; }
+
+header {
+  padding: 1em; }
   header #logo img {
-    max-width: 400px;
-    width: 75%; }
+    width: 100%; }
+  header #logo + p {
+    color: rgba(102, 102, 102, 0.75);
+    font-size: 0.75em; }
+  header nav dl dt {
+    font-weight: bold;
+    font-size: 0.75em;
+    color: rgba(26, 26, 26, 0.75); }
+  header nav dl dd {
+    margin-left: 1em; }
+  header .warning-box {
+    font-size: 0.75em; }
+
+article {
+  padding: 1em; }
 
 footer {
   font-size: 0.675em;
-  color: rgba(102, 102, 102, 0.75);
-  margin: 0 auto;
-  max-width: 500px; }
+  color: rgba(255, 255, 255, 0.85);
+  margin: 2em auto 0 auto; }
   footer a {
-    color: rgba(102, 102, 102, 0.75);
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: underline; }
   footer p {
     margin: 0 0 0.25em 0; }
+
+#main {
+  width: 100%;
+  padding: 1em;
+  position: relative;
+  background-color: rgba(250, 250, 250, 0.95);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.56); }
+
+.event .description {
+  font-size: 0.75em; }
+
+/** Responsive Styles **/
+@media screen and (min-width: 768px) {
+  header {
+    float: left;
+    width: 25%; }
+
+  article {
+    float: left;
+    width: 75%; }
+
+  .event .info {
+    float: left;
+    width: 25%; }
+  .event .description {
+    float: left;
+    width: 75%;
+    padding-left: 10%; } }
