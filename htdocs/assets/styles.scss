@@ -171,6 +171,7 @@ footer {
   .description {
     font-size: 0.75em;
   }
+  p { margin-top: 0;}
 }
 
 /** Responsive Styles **/
@@ -191,11 +192,11 @@ footer {
   .event {
     .info {
       float: left;
-      width: 25%;
+      width: 35%;
     }
     .description {
       float: left;
-      width: 75%;
+      width: 65%;
       padding-left: 10%;
     }
   }

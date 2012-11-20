@@ -7,7 +7,7 @@
     <meta name="author" content="Gründerhub FrankfurtRheinMain | http://gründerhub.de/">
     <!-- See /humans.txt for more infos -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="./build/complete-min.20121117.css" type="text/css">
+    <link rel="stylesheet" href="./build/complete-min.20121118.css" type="text/css">
     <!--
     <link rel="stylesheet" href="./assets/normalize.css" type="text/css">
     <link rel="stylesheet" href="./assets/font-awesome.css" type="text/css">
@@ -26,7 +26,7 @@
         <nav>
             <dl>
                 <dt>Themen</dt>
-                <dd><!-- a href="/kalender" --><i class="icon-calendar"></i> Kalender<!-- /a --></dd>
+                <dd><a href="/"><i class="icon-calendar"></i> Kalender</a></dd>
                 <dt>Kontakt</dt>
                 <dd>
                     <a href="https://www.facebook.com/gruenderhub" rel="me"><i class="icon-facebook"></i>
@@ -58,9 +58,6 @@
 
         setlocale(LC_ALL, 'de_DE.utf8');
 
-        error_reporting(-1);
-        ini_set('display_errors', 1);
-
         require_once '../lib/CalendarParser.php';
 
         $calendar = new CalendarParser(new SplFileInfo('../data/calendar.ics'));
@@ -73,31 +70,78 @@
             $diffDays = $diff->invert ? $diff->days : -1 * $diff->days;
             if ($diffDays < 0) continue;
             $end = new DateTime($event->DTEND);
+            $id = sha1($event->UID);
+            $showdetail = isset($_GET['detail']) && $_GET['detail'] == $id;
+
+            if (isset($_GET['detail']) && $_GET['detail'] !== $id) continue;
 
             ?>
 
-            <div itemscope itemtype="http://schema.org/Event" class="event clearfix">
+            <div itemscope itemtype="http://schema.org/Event" class="event clearfix" id="<?php echo $id; ?>">
 
                 <p class="info">
 
                     <strong itemprop="name"><?php echo $event->SUMMARY; ?></strong><br>
                     <small>
+                        <i class="icon-calendar"></i>
                         <time datetime="<?php echo sprintf('%sT%s+00:00', $start->format('Y-m-d'), $start->format('H:i:s')); ?>" itemprop="startDate"><?php echo strftime('%A, %d. %B %Y', $start->format('U')); ?>
                         </time>
                         <time datetime="<?php echo sprintf('%sT%s+00:00', $end->format('Y-m-d'), $end->format('H:i:s')); ?>" itemprop="endDate"></time>
-                        , <?php echo $start->format('H:i'); ?> Uhr
+                        <br><i class="icon-time"></i> <?php echo $start->format('H:i'); ?> Uhr
                     </small>
                     <br>
                     <small itemprop="location">
-                        <a href="http://maps.google.com/?q=<?php echo urlencode($event->LOCATION); ?>"><?php echo $event->LOCATION; ?></a>
+                        <a href="http://maps.google.com/?q=<?php echo urlencode($event->LOCATION); ?>"><i class="icon-map-marker"></i> <?php echo $event->LOCATION; ?>
+                        </a>
                     </small>
                 </p>
 
                 <div itemprop="description" class="description">
                     <?php
+
+                    error_reporting(-1);
+                    ini_set('display_errors', 1);
+
+                    $breakLimit = 500;
                     $desc = $event->DESCRIPTION;
+
+                    $needsbreak = strlen($desc) >= $breakLimit;
+                    $hasmore = false;
+                    if ($needsbreak) {
+                        $hasbreak = strpos($desc, '\n');
+                        if ($hasbreak) {
+                            $nextBreak = strpos($desc, '\n', $breakLimit);
+                            if ($nextBreak === false) {
+                                $shortdesc = $desc;
+                            } else {
+                                $hasmore = true;
+                                $shortdesc = substr($desc, 0, $nextBreak);
+                            }
+                        } else {
+                            $shortdesc = substr($desc, 0, $breakLimit);
+                            $hasmore = true;
+                        }
+                    } else {
+                        $shortdesc = $desc;
+                    }
+                    if ($hasmore) {
+                        $moredesc = str_replace('\n', "<br>", substr($desc, strlen($shortdesc)));
+                    }
                     $desc = str_replace('\n', "<br>", $desc);
-                    echo $desc; ?>
+                    $shortdesc = str_replace('\n', "<br>", $shortdesc);
+
+                    if ($showdetail) {
+                        echo $desc;
+                    } else {
+                        echo $shortdesc;
+                        ?>
+                        <?php if ($hasmore): ?><br>
+                            <a class="more" href="?detail=<?php echo $id; ?>"><i class="icon-plus"></i>
+                                mehr …</a>
+                            <?php endif;
+                    }
+
+                    ?>
                 </div>
 
             </div>

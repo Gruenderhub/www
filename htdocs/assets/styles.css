@@ -112,6 +112,8 @@ footer {
 
 .event .description {
   font-size: 0.75em; }
+.event p {
+  margin-top: 0; }
 
 /** Responsive Styles **/
 @media screen and (min-width: 768px) {
@@ -125,8 +127,8 @@ footer {
 
   .event .info {
     float: left;
-    width: 25%; }
+    width: 35%; }
   .event .description {
     float: left;
-    width: 75%;
+    width: 65%;
     padding-left: 10%; } }
