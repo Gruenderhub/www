@@ -67,8 +67,8 @@
             $start = new DateTime($event->DTSTART);
 
             $diff = $start->diff($now);
-            $diffDays = $diff->invert ? $diff->days : -1 * $diff->days;
-            if ($diffDays < 0) continue;
+            $isPast = !$diff->invert;                                                                                                                                                          
+            if ($isPast) continue;   
             $end = new DateTime($event->DTEND);
             $id = sha1($event->UID);
             $showdetail = isset($_GET['detail']) && $_GET['detail'] == $id;
@@ -102,7 +102,7 @@
                     error_reporting(-1);
                     ini_set('display_errors', 1);
 
-                    $breakLimit = 500;
+                    $breakLimit = 400;
                     $desc = $event->DESCRIPTION;
 
                     $needsbreak = strlen($desc) >= $breakLimit;
