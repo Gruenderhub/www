@@ -18,8 +18,8 @@ foreach ($calendar->getEvents() as $event):
     $start = new DateTime($event->DTSTART);
 
     $diff = $start->diff($now);
-    $diffDays = $diff->invert ? $diff->days : -1 * $diff->days;
-    if ($diffDays < 0) continue;
+    $isPast = !$diff->invert;
+    if ($isPast) continue;
     $end = new DateTime($event->DTEND);
     $id = sha1($event->UID);
     $showdetail = isset($_GET['detail']) && $_GET['detail'] == $id;
@@ -53,7 +53,7 @@ foreach ($calendar->getEvents() as $event):
         error_reporting(-1);
         ini_set('display_errors', 1);
 
-        $breakLimit = 500;
+        $breakLimit = 400;
         $desc = $event->DESCRIPTION;
 
         $needsbreak = strlen($desc) >= $breakLimit;
@@ -87,7 +87,8 @@ foreach ($calendar->getEvents() as $event):
             echo $shortdesc;
             ?>
             <?php if ($hasmore): ?><br>
-                <a class="more" href="?detail=<?php echo $id; ?>"><i class="icon-plus"></i> mehr …</a>
+                <a class="more" href="?detail=<?php echo $id; ?>"><i class="icon-plus"></i>
+                    mehr …</a>
                 <?php endif;
         }
 
