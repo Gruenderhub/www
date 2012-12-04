@@ -24,6 +24,11 @@ foreach ($calendar->getEvents() as $event):
     $id = sha1($event->UID);
     $showdetail = isset($_GET['detail']) && $_GET['detail'] == $id;
 
+    // Alle Zeite in Google Calender sind UTC
+    $tz = new DateTimeZone('Europe/Berlin');
+    $start->setTimezone($tz);
+    $end->setTimezone($tz);
+
     if (isset($_GET['detail']) && $_GET['detail'] !== $id) continue;
 
     ?>
@@ -87,8 +92,7 @@ foreach ($calendar->getEvents() as $event):
             echo $shortdesc;
             ?>
             <?php if ($hasmore): ?><br>
-                <a class="more" href="?detail=<?php echo $id; ?>"><i class="icon-plus"></i>
-                    mehr …</a>
+                <a class="more" href="?detail=<?php echo $id; ?>"><i class="icon-plus"></i> mehr …</a>
                 <?php endif;
         }
 
