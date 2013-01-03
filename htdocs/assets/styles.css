@@ -78,17 +78,22 @@ header {
   padding: 1em; }
   header #logo img {
     width: 100%; }
-  header #logo + p {
+  header p {
     color: rgba(102, 102, 102, 0.75);
     font-size: 0.75em; }
+  header h2 {
+    font-size: 1em;
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0; }
+  header h2 + p {
+    margin-top: 0; }
   header nav dl dt {
     font-weight: bold;
     font-size: 0.75em;
     color: rgba(26, 26, 26, 0.75); }
   header nav dl dd {
     margin-left: 1em; }
-  header .warning-box {
-    font-size: 0.75em; }
 
 article {
   padding: 1em; }

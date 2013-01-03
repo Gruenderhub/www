@@ -119,9 +119,20 @@ header {
     }
   }
 
-  #logo + p {
+  p {
     color: lighten($text, 40);
     font-size: 0.75em;
+  }
+
+  h2 {
+    font-size: 1em;
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  h2 + p {
+    margin-top: 0;
   }
 
   nav {
@@ -135,10 +146,6 @@ header {
         margin-left: 1em;
       }
     }
-  }
-
-  .warning-box {
-    font-size: 0.75em;
   }
 }
 
@@ -171,7 +178,9 @@ footer {
   .description {
     font-size: 0.75em;
   }
-  p { margin-top: 0;}
+  p {
+    margin-top: 0;
+  }
 }
 
 /** Responsive Styles **/
