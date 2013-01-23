@@ -61,7 +61,8 @@ class CalendarParser
         return $events;
     }
 
-    private function unescape($data) {
+    private function unescape($data)
+    {
         return str_replace('\,', ',', trim($data, "\n\r\t\x0B\0"));
     }
 }

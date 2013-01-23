@@ -1,7 +1,7 @@
 <h2>
     Kalender
     <small>
-        <a href="https://www.google.com/calendar/ical/4hkvb3j7lf5ruq3oni1dtigccc%40group.calendar.google.com/public/basic.ics" class="align-right"><i class="icon-download"></i>
+        <a href="/calendar.ics" class="align-right"><i class="icon-download"></i>
             iCal</a></small>
 </h2>
 
