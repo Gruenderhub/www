@@ -1,12 +1,5 @@
-/** Colors **/
-
-$bg: #fafafa;
-$text: rgba(0, 0, 0, 0.75);
-$dim: lighten($text, 40);
-$beige: #B48868;
-$beige_hover: lighten($beige, 10);
-$hr_color: lighten($beige, 30);
-$warning: mix($bg, #ff0, 80);
+@import "colors";
+@import "mixin-border-radius";
 
 /** Helpers **/
 
@@ -42,8 +35,12 @@ $warning: mix($bg, #ff0, 80);
   line-height: 1.5em;
 }
 
-.align-right {
+.alignright {
   float: right;
+}
+
+.alignleft {
+  float: left;
 }
 
 /** Styles **/
@@ -144,6 +141,7 @@ header {
       }
       dd {
         margin-left: 1em;
+        margin-bottom: 1em;
       }
     }
   }
@@ -183,30 +181,46 @@ footer {
   }
 }
 
-/** Responsive Styles **/
+#right {
+  #headnav {
+    @extend .clearfix;
+  }
+  nav.categories {
+    @extend .alignleft;
+    margin-left: 1em;
+    a {
+      background-color: $beige;
+      color: $bg;
+      font-size: 0.75em;
+      padding: 0.25em 0.5em;
+      display: inline-block;
+      border-style: solid;
+      border-width: 1px;
+      border-right-color: rgba(#000, 0.25);
+      border-bottom-color: rgba(#000, 0.25);
+      border-top-color: rgba(#fff, 0.75);
+      border-left-color: rgba(#fff, 0.75);
 
-@media screen and (min-width: 768px) {
-
-  header {
-    float: left;
-    width: 25%;
+      @include border-radius(5px);
+    }
   }
 
-  article {
-    float: left;
-    width: 75%;
-
+  nav.nav-single {
+    @extend .alignright;
+    font-size: 0.75em;
+    .nav-next {
+      margin-left: 2em;
+      @extend .alignleft;
+    }
+    .nav-previous {
+      @extend .alignleft;
+    }
   }
 
-  .event {
-    .info {
-      float: left;
-      width: 35%;
-    }
-    .description {
-      float: left;
-      width: 65%;
-      padding-left: 10%;
-    }
+  nav.articles {
+    font-size: 0.75em;
   }
 }
+
+@import "post";
+@import "responsive";

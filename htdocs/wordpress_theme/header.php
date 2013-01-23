@@ -1,24 +1,29 @@
 <!doctype html>
 <html lang="de-de">
 <head>
-    <meta charset="utf-8">
-    <title>Gründerhub FrankfurtRheinMain</title>
-    <meta name="description" content="Der Gründerhub FrankfurtRheinMain ist eine Initiative aus privaten, gewerblichen und kommunalen Mitgliedern zur Förderung innovativer Gründungen.">
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('title'); ?></title>
+    <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta name="author" content="Gründerhub FrankfurtRheinMain | http://gründerhub.de/">
     <!-- See /humans.txt for more infos -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <?php
+    // define('BUST', time());
+    define('BUST', '20130123');?>
     <!--
-    <link rel="stylesheet" href="./assets/normalize.css" type="text/css">
-    <link rel="stylesheet" href="./assets/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="./assets/styles.css" type="text/css">
-    -->
-    <link rel="stylesheet" href="./build/complete-min.2013013.css" type="text/css">
+    <link rel="stylesheet" href="/build/complete-min.<?php echo BUST; ?>.css" type="text/css">
+-->
+    <link rel="stylesheet" href="/assets/normalize.css" type="text/css">
+    <link rel="stylesheet" href="/assets/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+    <?php wp_head(); ?>
 </head>
 <body>
 <div id="main" class="clearfix">
     <header>
         <div id="logo">
-            <h1><a href="/" rel="index"><img src="build/logo-m.png" alt="Gründerhub FrankfurtRheinMain"></a></h1>
+            <h1><a href="/" rel="index"><img src="/build/logo-m.png" alt="Gründerhub FrankfurtRheinMain"></a>
+            </h1>
         </div>
         <p>Der Gründerhub FrankfurtRheinMain ist eine Initiative aus privaten, gewerblichen und kommunalen Mitgliedern
             zur Förderung innovativer Gründungen.</p>
@@ -63,5 +68,3 @@
                 <a href="https://twitter.com/gruenderhub">Twitter</a>.</p>
         </div>
     </header>
-    <div id="right">
-    <article>

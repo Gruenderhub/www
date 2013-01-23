@@ -1,0 +1,108 @@
+/**
+ * Styles für den Magazin-Content
+ */
+
+article.post {
+  @extend .clearfix;
+  h2 {
+    margin-bottom: 1em;
+  }
+  p {
+    margin: 0 0 1em 0;
+  }
+  div.content {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    line-height: 1.5em;
+    h3, h4, h5, h6 {
+      margin-bottom: 0;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    blockquote {
+      font-style: italic;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      p {
+        margin-left: 4em;
+        margin-right: 4em;
+      }
+    }
+    blockquote:before {
+      content: '„';
+      font-size: 8em;
+      position: absolute;
+      left: 10px;
+      top: 0;
+      color: rgba($text, 0.25);
+    }
+    blockquote:after {
+      content: '“';
+      font-size: 8em;
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+      color: rgba($text, 0.25);
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  dl.info {
+    font-family: Helvetica, Arial, sans-serif;
+    dt {
+      font-size: 0.75em;
+      font-weight: bold;
+      color: lighten($text, 10);
+    }
+    dd {
+      margin-left: 1em;
+      margin-bottom: 1em;
+    }
+  }
+
+  aside {
+
+    dl {
+      @extend dl.info;
+      margin-top: 0;
+      dd.author-info {
+        img {
+          float: right;
+          background: transparent url(../build/sep.png);
+          padding: 4px;
+        }
+        line-height: 0.75em;
+        a {
+          line-height: 1.5em;
+        }
+      }
+      dd.excerpt {
+        font-size: 0.75em;
+        line-height: 1.25em;
+      }
+    }
+  }
+
+  img.size-thumbnail {
+    background: transparent url(../build/sep.png);
+    padding: 4px;
+  }
+  img.size-medium {
+    background: transparent url(../build/sep.png);
+    padding: 4px;
+  }
+  img.size-full {
+    background: transparent url(../build/sep.png);
+    padding: 4px;
+  }
+  img.alignright {
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+  img.alignleft {
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+
+}

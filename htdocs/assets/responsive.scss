@@ -1,0 +1,36 @@
+/** Responsive Styles **/
+
+@media screen and (min-width: 768px) {
+
+  header {
+    float: left;
+    width: 25%;
+  }
+
+  #right {
+    float: left;
+    width: 75%;
+  }
+
+  .event {
+    .info {
+      float: left;
+      width: 35%;
+    }
+    .description {
+      float: left;
+      width: 65%;
+      padding-left: 10%;
+    }
+  }
+  article.post {
+    div.content {
+      float: left;
+      width: 70%;
+    }
+    aside {
+      float: right;
+      width: 25%;
+    }
+  }
+}

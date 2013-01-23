@@ -1,0 +1,10 @@
+/** Colors **/
+
+$bg: #fafafa;
+$text: rgba(0, 0, 0, 0.75);
+$dim: lighten($text, 40);
+$beige: #B48868;
+$beige_hover: lighten($beige, 10);
+$hr_color: lighten($beige, 30);
+$warning: mix($bg, #ff0, 80);
+$border: rgba(0, 0, 0, 0.5);

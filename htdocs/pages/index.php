@@ -1,7 +1,7 @@
 <h2>
     Kalender
     <small>
-        <a href="/calendar.ics" class="align-right"><i class="icon-download"></i>
+        <a href="/calendar.ics" class="alignright"><i class="icon-download"></i>
             iCal</a></small>
 </h2>
 

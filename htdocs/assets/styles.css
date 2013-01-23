@@ -1,14 +1,17 @@
+@charset "UTF-8";
 /** Colors **/
 /** Helpers **/
 * {
   box-sizing: border-box; }
 
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, #right #headnav:before, article.post:before,
+.clearfix:after,
+#right #headnav:after,
+article.post:after {
   content: "";
   display: table; }
 
-.clearfix:after {
+.clearfix:after, #right #headnav:after, article.post:after {
   clear: both; }
 
 .hidden {
@@ -24,8 +27,11 @@
 .compactlines {
   line-height: 1.5em; }
 
-.align-right {
+.alignright, #right nav.nav-single {
   float: right; }
+
+.alignleft, #right nav.categories, #right nav.nav-single .nav-next, #right nav.nav-single .nav-previous {
+  float: left; }
 
 /** Styles **/
 html {
@@ -93,7 +99,8 @@ header {
     font-size: 0.75em;
     color: rgba(26, 26, 26, 0.75); }
   header nav dl dd {
-    margin-left: 1em; }
+    margin-left: 1em;
+    margin-bottom: 1em; }
 
 article {
   padding: 1em; }
@@ -120,13 +127,112 @@ footer {
 .event p {
   margin-top: 0; }
 
+#right nav.categories {
+  margin-left: 1em; }
+  #right nav.categories a {
+    background-color: #b48868;
+    color: #fafafa;
+    font-size: 0.75em;
+    padding: 0.25em 0.5em;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    border-right-color: rgba(0, 0, 0, 0.25);
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    border-top-color: rgba(255, 255, 255, 0.75);
+    border-left-color: rgba(255, 255, 255, 0.75);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+#right nav.nav-single {
+  font-size: 0.75em; }
+  #right nav.nav-single .nav-next {
+    margin-left: 2em; }
+#right nav.articles {
+  font-size: 0.75em; }
+
+/**
+ * Styles für den Magazin-Content
+ */
+article.post h2 {
+  margin-bottom: 1em; }
+article.post p {
+  margin: 0 0 1em 0; }
+article.post div.content {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.5em; }
+  article.post div.content h3, article.post div.content h4, article.post div.content h5, article.post div.content h6 {
+    margin-bottom: 0;
+    font-family: Helvetica, Arial, sans-serif; }
+  article.post div.content blockquote {
+    font-style: italic;
+    position: relative;
+    padding: 0;
+    margin: 0; }
+    article.post div.content blockquote p {
+      margin-left: 4em;
+      margin-right: 4em; }
+  article.post div.content blockquote:before {
+    content: '„';
+    font-size: 8em;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    color: rgba(0, 0, 0, 0.25); }
+  article.post div.content blockquote:after {
+    content: '“';
+    font-size: 8em;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.25); }
+  article.post div.content a {
+    text-decoration: underline; }
+article.post dl.info, article.post aside dl {
+  font-family: Helvetica, Arial, sans-serif; }
+  article.post dl.info dt, article.post aside dl dt {
+    font-size: 0.75em;
+    font-weight: bold;
+    color: rgba(26, 26, 26, 0.75); }
+  article.post dl.info dd, article.post aside dl dd {
+    margin-left: 1em;
+    margin-bottom: 1em; }
+article.post aside dl {
+  margin-top: 0; }
+  article.post aside dl dd.author-info {
+    line-height: 0.75em; }
+    article.post aside dl dd.author-info img {
+      float: right;
+      background: transparent url(../build/sep.png);
+      padding: 4px; }
+    article.post aside dl dd.author-info a {
+      line-height: 1.5em; }
+  article.post aside dl dd.excerpt {
+    font-size: 0.75em;
+    line-height: 1.25em; }
+article.post img.size-thumbnail {
+  background: transparent url(../build/sep.png);
+  padding: 4px; }
+article.post img.size-medium {
+  background: transparent url(../build/sep.png);
+  padding: 4px; }
+article.post img.size-full {
+  background: transparent url(../build/sep.png);
+  padding: 4px; }
+article.post img.alignright {
+  margin-left: 1em;
+  margin-bottom: 1em; }
+article.post img.alignleft, article.post #right nav.nav-single img.nav-next, #right nav.nav-single article.post img.nav-next, article.post #right nav.nav-single img.nav-previous, #right nav.nav-single article.post img.nav-previous {
+  margin-right: 1em;
+  margin-bottom: 1em; }
+
 /** Responsive Styles **/
 @media screen and (min-width: 768px) {
   header {
     float: left;
     width: 25%; }
 
-  article {
+  #right {
     float: left;
     width: 75%; }
 
@@ -136,4 +242,11 @@ footer {
   .event .description {
     float: left;
     width: 65%;
-    padding-left: 10%; } }
+    padding-left: 10%; }
+
+  article.post div.content {
+    float: left;
+    width: 70%; }
+  article.post aside {
+    float: right;
+    width: 25%; } }

@@ -1,0 +1,4 @@
+@mixin box-shadow {
+  box-shadow: 2px 2px 10px mix(#000, #fff, 35);
+  behavior: url(/css/PIE.htc);
+}
