@@ -12,6 +12,7 @@ $warning: mix($bg, #ff0, 80);
 
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 // http://nicolasgallagher.com/micro-clearfix-hack/
