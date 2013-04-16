@@ -31,8 +31,7 @@
                 <dd>
                     <a href="https://www.facebook.com/gruenderhub" rel="me"><i class="icon-facebook"></i>
                         Facebook</a><br> <a href="https://twitter.com/gruenderhub"><i class="icon-twitter"></i> Twitter</a><br>
-                    <a href="https://plus.google.com/106785101604023095231/posts" rel="me"><i class="icon-google-plus"></i>
-                        Google+ </a><br> <a href="/impressum"><i class="icon-group"></i> Impressum</a>
+                        <a href="/impressum"><i class="icon-group"></i> Impressum</a>
                 </dd>
             </dl>
         </nav>
@@ -59,4 +58,5 @@
                 <a href="https://twitter.com/gruenderhub">Twitter</a>.</p>
         </div>
     </header>
+    <div id="right">
     <article>
