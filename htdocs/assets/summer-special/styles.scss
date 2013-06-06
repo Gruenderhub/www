@@ -1,0 +1,119 @@
+$maxwidth: 750px;
+
+/** Helpers **/
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+a {
+  color: #d10000;
+  text-decoration: none;
+}
+
+h2 {
+
+}
+
+html {
+  background: #000 url(bg.jpg);
+  color: rgba(#fff, 0.9);
+}
+
+header {
+  text-align: center;
+  margin-top: 10%;
+  font-family: Signika, sans-serif;
+  h1 {
+    text-shadow: 0px 5px 10px rgba(#000, 0.75);
+    font-size: 2.5em;
+    time {
+      font-size: 0.75em;
+    }
+    em {
+      font-style: normal;
+      font-size: 1.25em;
+    }
+    strong {
+      font-size: 2.5em;
+    }
+  }
+}
+
+div.blackbox {
+  background-color: rgba(#000, 0.5);
+  width: 100%;
+  padding: 2% 0;
+}
+
+article {
+  @extend .clearfix;
+  font-size: 1.5em;
+  font-family: Signika, sans-serif;
+  max-width: $maxwidth;
+  margin: 0 auto;
+  text-shadow: 0px 2px 2px rgba(#000, 0.75);
+  iframe {
+    float: right;
+    margin-left: 10px;
+  }
+}
+
+footer {
+  @extend .clearfix;
+  background-color: rgba(#000, 0.75);
+  color: rgba(#fff, 0.5);
+  font-size: 0.75em;
+  padding: 5% 0;
+  ul {
+    @extend .clearfix;
+    width: 100%;
+    max-width: $maxwidth;
+    list-style: none;
+    padding: 0;
+    li {
+      float: left;
+      img {
+        width: 100%;
+      }
+    }
+    li.circus {
+      width: 15%;
+    }
+    li.gruenderhub {
+      width: 55%;
+      img {
+        padding: 0 10%;
+      }
+    }
+    li.microsoft {
+      width: 30%;
+    }
+    margin: 0 auto;
+  }
+  article {
+    padding-top: 4em;
+    text-align: center;
+    max-width: $maxwidth;
+    margin: 0 auto;
+    p {
+      font-size: 0.75em;
+    }
+  }
+  a {
+    color: rgba(#fff, 0.5);
+    text-decoration: underline;
+  }
+}
