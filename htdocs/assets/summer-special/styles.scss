@@ -153,7 +153,7 @@ nav {
 }
 
 /** Responsive Styles **/
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 500px) {
   header {
     font-size: 2em;
     h1 {
@@ -165,13 +165,13 @@ nav {
   article {
     font-size: 1.5em;
     img.map {
-      width: auto;
+      width: 50%;
+      max-width: 400px;
       float: right;
       margin-left: 10px;
       box-shadow: 0px 5px 10px rgba(#000, 0.75);
     }
   }
-
 }
 
 @media screen and (min-width: 768px) {

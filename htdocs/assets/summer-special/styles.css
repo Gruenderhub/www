@@ -109,7 +109,7 @@ nav {
     color: #fff; }
 
 /** Responsive Styles **/
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 500px) {
   header {
     font-size: 2em; }
     header h1 small {
@@ -118,7 +118,8 @@ nav {
   article {
     font-size: 1.5em; }
     article img.map {
-      width: auto;
+      width: 50%;
+      max-width: 400px;
       float: right;
       margin-left: 10px;
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.75); } }
