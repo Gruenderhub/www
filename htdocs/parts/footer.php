@@ -1,5 +1,6 @@
 </article>
 </div>
+</div>
 <footer class="textcenter compactlines">
     <p>
         Das Gründerhub-Logo wurde von Markus Tacker entworfen und steht unter der
