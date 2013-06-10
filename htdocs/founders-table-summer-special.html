@@ -17,7 +17,7 @@
     <meta property="og:image" content="http://xn--grnderhub-r9a.de/assets/summer-special/bbq.png">
     <meta property="og:site_name" content="Gründerhub FrankfurtRheinMain">
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/Event">
 <header>
     <img src="assets/summer-special/bbq.png" alt="Gründerhub FrankfurtRheinMain &middot; Founders Table Summer Special &ndash; Open Bar &amp; BBQ" id="bbq">
 
@@ -31,12 +31,14 @@
     <article>
         <h2>
             <small>We’re happy to announce:</small>
-            <br>The Founders Table Summer Special
+            <br>The <span itemprop="name">Founders Table Summer Special</span>
         </h2>
-        <p>We invite you to enjoy the warm summer in the garden of Circus Frankfurt with BBQ and delicious cocktails for
-            just 5 € entrance fee. At our <strong>Founder Dating</strong> you can meet exciting founders, at the
-            <strong>Startup Clinic</strong> we allow you to ask our audience questions and with our
-            <strong>Spotlights</strong> you get the latest startups info from the region. </p>
+        <div itemprop="description">
+            <p>We invite you to enjoy the warm summer in the garden of Circus Frankfurt with BBQ and delicious cocktails
+                for just 5 € entrance fee. At our <strong>Founder Dating</strong> you can meet exciting founders, at the
+                <strong>Startup Clinic</strong> we allow you to ask our audience questions and with our <strong>Spotlights</strong>
+                you get the latest startups info from the region. </p>
+        </div>
 
         <h3>Meet us and save the date!</h3>
 
@@ -53,8 +55,9 @@
 
         <a href="http://goo.gl/maps/1joZH" title="Open location in Google Maps."><img src="http://maps.googleapis.com/maps/api/staticmap?center=Bleichstra%C3%9Fe+46,+Frankfurt+am+Main,+Deutschland&amp;zoom=16&amp;size=400x400&amp;maptype=roadmap&amp;sensor=false&amp;markers=color:blue%7Clabel:C%7C50.117826,8.682997" class="map" alt="CIRCUS Location on Google Maps"></a>
 
-        <p><strong>CIRCUS</strong><br> Bleichstraße 46<br>60313 Frankfurt<br>
-            <a href="http://www.circusfrankfurt.de/" rel="friend">circusfrankfurt.de</a></p>
+        <p itemprop="location" itemscope itemtype="http://schema.org/Place"><strong itemprop="name">CIRCUS</strong><br>
+            <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">Bleichstraße 46</span><br><span class="hidden"><span itemprop="addressCountry">DE</span>-</span><span itemprop="postalCode">60313</span> <span itemprop="addressLocality">Frankfurt</span></span><br>
+            <a href="http://www.circusfrankfurt.de/" rel="friend" itemprop="url">circusfrankfurt.de</a></p>
     </article>
     <aside>
 

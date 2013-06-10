@@ -7,6 +7,10 @@ $maxwidth: 750px;
   -moz-box-sizing: border-box;
 }
 
+.hidden {
+  display: none;
+}
+
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
