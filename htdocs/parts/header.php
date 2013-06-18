@@ -19,7 +19,7 @@
     <header>
         <div id="logo">
             <h1>
-                <a href="/gründer-stammtisch-summer-special.html"><img src="/assets/summer-special/bbq.png" alt="Gründer-Stammtisch Summer Special &ndash; Open Bar &amp; BBQ"></a>
+                <h1><a href="/" rel="index"><img src="build/logo-m.png" alt="Gründerhub FrankfurtRheinMain"></a></h1>
             </h1>
         </div>
         <p>Der Gründerhub FrankfurtRheinMain ist eine Initiative aus privaten, gewerblichen und kommunalen Mitgliedern
