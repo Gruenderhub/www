@@ -21,7 +21,7 @@ a {
   text-decoration: none; }
 
 html {
-  background: #00152e url("http://farm8.staticflickr.com/7277/7081183255_b4e7c6978c_b.jpg");
+  background: #00152e url("./bg.jpg");
   background-size: 100% 100%;
   background-attachment: fixed;
   color: rgba(255, 255, 255, 0.9); }
