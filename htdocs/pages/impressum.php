@@ -4,7 +4,7 @@
 
 <p>
     <a href="/ansprechpartner">Mario Hachemer</a><br>
-    <a href="mailto:mario.hachemer@s2s.de"><i class="icon icon-envelope-alt"></i> mario.hachemer@s2s.de</a>
+    <a href="mailto:mhachemer@gruenderhub.biz"><i class="icon icon-envelope-alt"></i> mhachemer@gruenderhub.biz</a>
 </p>
 
 <h3>Diensteanbieter i.S.d. §5 TMG</h3>
