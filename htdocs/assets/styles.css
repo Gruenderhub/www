@@ -121,6 +121,13 @@ footer {
 .event p {
   margin-top: 0; }
 
+.person {
+  max-width: 250px; }
+  .person img.portrait {
+    background-image: url(sep.png);
+    padding: 5px;
+    width: 100%; }
+
 /** Responsive Styles **/
 @media screen and (min-width: 768px) {
   header {

@@ -7,12 +7,12 @@
     <meta name="author" content="Gründerhub FrankfurtRheinMain | http://gründerhub.de/">
     <!-- See /humans.txt for more infos -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./build/complete-min.20130927.css" type="text/css">
     <!--
     <link rel="stylesheet" href="./assets/normalize.css" type="text/css">
     <link rel="stylesheet" href="./assets/font-awesome.css" type="text/css">
     <link rel="stylesheet" href="./assets/styles.css" type="text/css">
     -->
-    <link rel="stylesheet" href="./build/complete-min.2013013.css" type="text/css">
 </head>
 <body>
 <div id="main" class="clearfix">
@@ -33,7 +33,8 @@
                 <dd>
                     <a href="https://www.facebook.com/gruenderhub" rel="me"><i class="icon-facebook"></i>
                         Facebook</a><br> <a href="https://twitter.com/gruenderhub"><i class="icon-twitter"></i> Twitter</a><br>
-                        <a href="/impressum"><i class="icon-group"></i> Impressum</a>
+                        <a href="/ansprechpartner"><i class="icon-user"></i> Ansprechpartner</a><br>
+                        <a href="/impressum"><i class="icon-briefcase"></i> Impressum</a>
                 </dd>
             </dl>
         </nav>

@@ -1,7 +1,7 @@
 <?php
 
 $home = ''; // Name der Startseite
-$pages = array($home, 'impressum'); // Erlaubte Seitennamen
+$pages = array($home, 'impressum', 'ansprechpartner'); // Erlaubte Seitennamen
 
 // Findet den Seitennamen
 $page = function ($name) use ($home, $pages) {

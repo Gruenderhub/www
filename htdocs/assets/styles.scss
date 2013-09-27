@@ -184,6 +184,15 @@ footer {
   }
 }
 
+.person {
+  max-width: 250px;
+  img.portrait {
+    background-image: url(sep.png);
+    padding: 5px;
+    width: 100%;
+  }
+}
+
 /** Responsive Styles **/
 
 @media screen and (min-width: 768px) {
