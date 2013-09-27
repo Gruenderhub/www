@@ -66,6 +66,16 @@
             <fileset file="${build.dir}/*.png"/>
         </apply>
 
+        <!-- Optimize JPGs -->
+        <copy todir="${build.dir}/">
+            <fileset file="${assets.dir}/*.jpg"/>
+        </copy>
+        <apply executable="/usr/bin/jpegoptim">
+            <fileset file="${build.dir}/*.jpg"/>
+            <arg value="--all-progressive"/>
+            <arg value="--strip-all"/>
+        </apply>
+
     </target>
     
     <target name="clean">
