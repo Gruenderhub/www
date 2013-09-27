@@ -1,0 +1,117 @@
+/** Helpers **/
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+.hidden {
+  display: none; }
+
+.clearfix:before, article:before, footer:before,
+.clearfix:after,
+article:after,
+footer:after {
+  content: "";
+  display: table; }
+
+.clearfix:after, article:after, footer:after {
+  clear: both; }
+
+a {
+  color: #99feff;
+  text-decoration: none; }
+
+html {
+  background: #00152e url("http://farm8.staticflickr.com/7277/7081183255_b4e7c6978c_b.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  color: rgba(255, 255, 255, 0.9); }
+
+header {
+  text-align: center;
+  margin-top: 10%;
+  font-family: Signika, sans-serif; }
+  header h1 {
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.75);
+    font-size: 1.25em; }
+    header h1 em {
+      font-style: normal; }
+    header h1 strong {
+      font-size: 2em; }
+    header h1 small {
+      font-size: 1em; }
+
+#bbq {
+  max-width: 485px;
+  width: 95%; }
+
+div.blackbox {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 2% 0; }
+
+.content, article {
+  font-family: Signika, sans-serif;
+  max-width: 750px;
+  margin: 0 auto;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.75);
+  padding: 1em;
+  position: relative; }
+
+article {
+  font-size: 1em; }
+  article img.mockup {
+    width: 33%;
+    float: right;
+    margin-left: 1em;
+    box-shadow: #99feff 0 0 5px; }
+  article img.map {
+    width: 100%; }
+  article p {
+    line-height: 1.5em; }
+
+footer {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75em;
+  padding: 5% 0; }
+  footer article {
+    padding-top: 4em;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto; }
+    footer article p {
+      font-size: 0.75em; }
+  footer a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: underline; }
+
+/** Responsive Styles **/
+@media screen and (min-width: 500px) {
+  header {
+    font-size: 2em; }
+    header h1 small {
+      font-size: 0.75em; }
+
+  article {
+    font-size: 1.5em; }
+    article img.map {
+      width: 50%;
+      max-width: 400px;
+      float: right;
+      margin-left: 10px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.75); } }
+@media screen and (min-width: 768px) {
+  article {
+    padding: 0;
+    font-size: 1.5em; }
+
+  header {
+    font-size: 2.5em; }
+    header time {
+      font-size: 0.75em; }
+    header em {
+      font-size: 1em; }
+    header strong {
+      font-size: 2.5em; }
+    header h1 small {
+      font-size: 0.75em; } }
