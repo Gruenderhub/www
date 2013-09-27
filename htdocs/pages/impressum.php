@@ -1,5 +1,12 @@
 <h2>Impressum</h2>
 
+<h3>Kontakt</h3>
+
+<p>
+    <a href="/ansprechpartner">Mario Hachemer</a><br>
+    <a href="mailto:mario.hachemer@s2s.de"><i class="icon icon-envelope-alt"></i> mario.hachemer@s2s.de</a>
+</p>
+
 <h3>Diensteanbieter i.S.d. §5 TMG</h3>
 
 <p>Zentrum für Entrepreneurship ZFE GmbH<br> Dornkratz 1 WP
