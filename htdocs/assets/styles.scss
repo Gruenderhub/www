@@ -4,6 +4,7 @@ $bg: #ffffff;
 $text: #221f1c;
 $dim: lighten($text, 40);
 $beige: #B48868;
+$lightgrey: #979797;
 $beige_hover: lighten($beige, 10);
 $hr_color: lighten($beige, 30);
 $warning: #e6e6e6;
@@ -63,11 +64,11 @@ body {
 
 a {
   text-decoration: none;
-  color: $beige;
+  color: $lightgrey;
 }
 
 a:hover {
-  color: $beige_hover;
+  color: $text;
 }
 
 p:last-child {
