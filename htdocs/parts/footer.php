@@ -7,7 +7,7 @@
         <a href="http://creativecommons.org/licenses/by/3.0/de/deed.de">Creative Commons Namensnennung 3.0 Deutschland
             (CC BY 3.0) Lizenz</a>.</p>
 
-    <p>Hergestellt in FrankfurtRheinMain von <a href="humans.txt">diesen Menschen</a>.</p>
+    <p>Hergestellt in frankfurt.rhein.main von <a href="humans.txt">diesen Menschen</a>.</p>
 
     <p><a href="https://github.com/Gruenderhub/www">Quellcode dieser Website bei GitHub</a>.</p>
 </footer>
