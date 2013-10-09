@@ -6,7 +6,7 @@ $dim: lighten($text, 40);
 $beige: #B48868;
 $lightgrey: #979797;
 $beige_hover: lighten($beige, 10);
-$hr_color: lighten($beige, 30);
+$hr_color: $lightgrey;
 $warning: #e6e6e6;
 
 /** Helpers **/
