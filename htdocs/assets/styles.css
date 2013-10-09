@@ -73,9 +73,9 @@ h2 {
 hr {
   border: 0;
   /*  background-image: url(sep.png); */
-  background-color: white;
+  background-color: #221f1c;
   height: 8px;
-  margin: 20px 0; }
+  margin: 55px 0 25px 0; }
 
 header {
   padding: 1em; }
