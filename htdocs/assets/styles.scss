@@ -1,12 +1,12 @@
 /** Colors **/
 
-$bg: #fafafa;
-$text: rgba(0, 0, 0, 0.75);
+$bg: #ffffff;
+$text: #221f1c;
 $dim: lighten($text, 40);
 $beige: #B48868;
 $beige_hover: lighten($beige, 10);
 $hr_color: lighten($beige, 30);
-$warning: mix($bg, #ff0, 80);
+$warning: #e6e6e6;
 
 /** Helpers **/
 
@@ -51,10 +51,10 @@ $warning: mix($bg, #ff0, 80);
 
 html {
   background-color: $bg;
-  background-image: url(farben-grau.png);
+/*  background-image: url(farben-grau.png); */
   color: $text;
   font-family: Arial, sans-serif;
-  line-height: 1.25em;
+  line-height: 1.355em;
 }
 
 body {
@@ -107,8 +107,10 @@ h2 {
 
 hr {
   border: 0;
-  background-image: url(sep.png);
-  height: 4px;
+/*  background-image: url(sep.png); */
+  background-color: $bg;
+  height: 8px;
+  margin: 20px 0;
 }
 
 header {
