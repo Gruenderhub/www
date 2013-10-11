@@ -46,7 +46,7 @@
             niemals weitergeben.</p>
 
         <form action="http://groups.google.com/group/gruenderhub/boxsubscribe">
-            <input type=hidden name="hl" value="de"> <label> <input type="enmail" name="email"> </label>
+            <input type=hidden name="hl" value="de"> <label> <input type="email" name="email"> </label>
             <button type="submit">Beitreten</button>
         </form>
 
